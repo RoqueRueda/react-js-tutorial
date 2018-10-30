@@ -12,12 +12,13 @@
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-  <script>
+  <script type="text/babel">
     const date = new Date()
     const rootElement = document.getElementById('root')
     
-    const element = <div>Hello World {date.toString()}</div>
+    const element = <div className="container">Hello World {date.toString()}</div>
     
     ReactDOM.render(element, rootElement)
   </script>
