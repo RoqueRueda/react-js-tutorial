@@ -8,12 +8,22 @@
 
 <body>
   <div id="root"></div>
+
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
   <script>
     const date = new Date()
     const rootElement = document.getElementById('root')
-    const element = document.createElement('div')
-    element.textContent = 'Hello World ' + date.toString()
-    rootElement.appendChild(element)
+    
+    const element = React.createElement(
+      'div',
+      { className: 'container' },
+      'Hello World ' + date.toString()
+    )
+    
+    ReactDOM.render(element, rootElement)
   </script>
 </body>
 </html>
