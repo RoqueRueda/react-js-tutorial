@@ -17,11 +17,7 @@
     const date = new Date()
     const rootElement = document.getElementById('root')
     
-    const element = React.createElement(
-      'div',
-      { className: 'container' },
-      'Hello World ' + date.toString()
-    )
+    const element = <div>Hello World {date.toString()}</div>
     
     ReactDOM.render(element, rootElement)
   </script>
